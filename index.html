@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>懒人日记</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft Yahei", sans-serif;
+        }
+        body {
+            background-color: #fff0f6;
+            min-height: 100vh;
+            padding: 1rem;
+        }
+        h1 {
+            color: #ff6b9d;
+            text-align: center;
+            margin: 1.5rem 0;
+            font-size: 2rem;
+        }
+        /* 大框架样式 */
+        .big-frame {
+            background-color: white;
+            border: 2px solid #ff6b9d;
+            border-radius: 12px;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .big-frame h2 {
+            color: #ff6b9d;
+            text-align: center;
+            margin-bottom: 1rem;
+            font-size: 1.6rem;
+        }
+        /* 小框架样式 */
+        .small-frame {
+            border: 2px solid #ff9eb5;
+            border-radius: 8px;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+        }
+        .small-frame:last-child {
+            margin-bottom: 0;
+        }
+        .small-frame-top {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 0.8rem;
+        }
+        .name-input {
+            flex: 1;
+            padding: 0.7rem;
+            border: 1px solid #ff9eb5;
+            border-radius: 6px;
+            font-size: 1rem;
+            color: #333;
+        }
+        .quick-btn {
+            background-color: #ff6b9d;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 0 1.2rem;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .quick-btn:hover {
+            background-color: #ff4d8a;
+        }
+        .content-box {
+            width: 100%;
+            min-height: 80px;
+            border: 1px solid #ff9eb5;
+            border-radius: 6px;
+            padding: 0.7rem;
+            font-size: 1rem;
+            color: #333;
+            resize: vertical;
+        }
+    </style>
+</head>
+<body>
+    <h1>懒人日记</h1>
+
+    <!-- ======================================
+         【所有可修改的内容都在这里！】
+         1. 你可以复制下面的大框架代码块，增加新的分类
+         2. 每个大框架里，复制小框架代码块增加新条目
+         3. 修改 name、url 即可更改名字和跳转链接
+         ====================================== -->
+
+    <!-- 大框架 1：示例分类，你可以改成自己的分类名 -->
+    <div class="big-frame">
+        <h2>我的常用网站</h2>
+
+        <!-- 小框架 1：示例条目 -->
+        <div class="small-frame">
+            <div class="small-frame-top">
+                <input type="text" class="name-input" value="百度" readonly>
+                <button class="quick-btn" onclick="window.open('https://www.baidu.com', '_blank')">速达</button>
+            </div>
+            <textarea class="content-box" readonly>百度一下，你就知道~</textarea>
+        </div>
+
+        <!-- 小框架 2：示例条目 -->
+        <div class="small-frame">
+            <div class="small-frame-top">
+                <input type="text" class="name-input" value="GitHub" readonly>
+                <button class="quick-btn" onclick="window.open('https://github.com', '_blank')">速达</button>
+            </div>
+            <textarea class="content-box" readonly>代码仓库托管平台</textarea>
+        </div>
+    </div>
+
+    <!-- 大框架 2：示例分类，你可以复制整个块，改成自己的分类 -->
+    <div class="big-frame">
+        <h2>学习工具</h2>
+
+        <!-- 小框架 1：示例条目 -->
+        <div class="small-frame">
+            <div class="small-frame-top">
+                <input type="text" class="name-input" value="菜鸟教程" readonly>
+                <button class="quick-btn" onclick="window.open('https://www.runoob.com', '_blank')">速达</button>
+            </div>
+            <textarea class="content-box" readonly>编程入门学习网站</textarea>
+        </div>
+    </div>
+
+    <!-- 【如何新增大框架？】
+    复制下面这段代码，修改 h2 里的文字，就可以新增一个大框架：
+    <div class="big-frame">
+        <h2>这里写你的大框架名字</h2>
+        （里面放你的小框架）
+    </div>
+    -->
+
+    <!-- 【如何新增小框架？】
+    复制下面这段代码，修改 name、url 和内容，就可以新增一个小框架：
+    <div class="small-frame">
+        <div class="small-frame-top">
+            <input type="text" class="name-input" value="这里写小框架的名字" readonly>
+            <button class="quick-btn" onclick="window.open('这里写跳转的网址', '_blank')">速达</button>
+        </div>
+        <textarea class="content-box" readonly>这里写备注内容</textarea>
+    </div>
+    -->
+
+</body>
+</html>
+
+
+
+
