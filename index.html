@@ -19,9 +19,18 @@
         h1 {
             color: #ff6b9d;
             text-align: center;
-            margin: 1.5rem 0;
+            margin: 1.5rem 0 0.5rem 0;
             font-size: 2rem;
             font-weight: 600;
+        }
+        /* 新增：提醒文字样式 */
+        .tip {
+            text-align: center;
+            color: #e63946;
+            font-size: 1rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            line-height: 1.4;
         }
         /* 大框架优化 */
         .big-frame {
@@ -70,7 +79,7 @@
             border-radius: 8px;
             padding: 0.8rem 1rem;
             font-size: 0.95rem;
-            font-weight: 500;
+            font-weight: 50;
             cursor: pointer;
             white-space: nowrap; /* 按钮文字强制不换行 */
             flex-shrink: 0; /* 按钮宽度固定，不被挤压 */
@@ -94,6 +103,11 @@
 </head>
 <body>
     <h1>懒人日记</h1>
+
+    <!-- 👇 这里就是你要的备注，我已经加好了！ -->
+    <div class="tip">
+        请用手机自带浏览器打开、或者夸克，禁止微信直接打开。
+    </div>
 
 <!-- =========================================
 【这里是你的内容，我完全保留了！】
