@@ -22,7 +22,6 @@
             margin: 1.5rem 0;
             font-size: 2rem;
         }
-        /* 大框架样式 */
         .big-frame {
             background-color: white;
             border: 2px solid #ff6b9d;
@@ -36,20 +35,14 @@
             margin-bottom: 1rem;
             font-size: 1.6rem;
         }
-        /* 小框架样式 */
         .small-frame {
             border: 2px solid #ff9eb5;
             border-radius: 8px;
             padding: 0.8rem;
             margin-bottom: 1rem;
-        }
-        .small-frame:last-child {
-            margin-bottom: 0;
-        }
-        .small-frame-top {
             display: flex;
             gap: 1rem;
-            margin-bottom: 0.8rem;
+            align-items: center;
         }
         .name-input {
             flex: 1;
@@ -57,102 +50,74 @@
             border: 1px solid #ff9eb5;
             border-radius: 6px;
             font-size: 1rem;
-            color: #333;
         }
         .quick-btn {
             background-color: #ff6b9d;
             color: white;
             border: none;
             border-radius: 6px;
-            padding: 0 1.2rem;
+            padding: 0.7rem 1.2rem;
             font-size: 1rem;
-            cursor: pointer;
-            transition: background-color 0.2s;
-        }
-        .quick-btn:hover {
-            background-color: #ff4d8a;
-        }
-        .content-box {
-            width: 100%;
-            min-height: 80px;
-            border: 1px solid #ff9eb5;
-            border-radius: 6px;
-            padding: 0.7rem;
-            font-size: 1rem;
-            color: #333;
-            resize: vertical;
         }
     </style>
 </head>
 <body>
     <h1>懒人日记</h1>
 
-    <!-- ======================================
-         【所有可修改的内容都在这里！】
-         1. 你可以复制下面的大框架代码块，增加新的分类
-         2. 每个大框架里，复制小框架代码块增加新条目
-         3. 修改 name、url 即可更改名字和跳转链接
-         ====================================== -->
+<!-- =========================================
+【这里开始就是你要改的全部内容！超级简单！】
+========================================= -->
 
-    <!-- 大框架 1：示例分类，你可以改成自己的分类名 -->
-    <div class="big-frame">
-        <h2>我的常用网站</h2>
 
-        <!-- 小框架 1：示例条目 -->
-        <div class="small-frame">
-            <div class="small-frame-top">
-                <input type="text" class="name-input" value="百度" readonly>
-                <button class="quick-btn" onclick="window.open('https://www.baidu.com', '_blank')">速达</button>
-            </div>
-            <textarea class="content-box" readonly>百度一下，你就知道~</textarea>
-        </div>
 
-        <!-- 小框架 2：示例条目 -->
-        <div class="small-frame">
-            <div class="small-frame-top">
-                <input type="text" class="name-input" value="GitHub" readonly>
-                <button class="quick-btn" onclick="window.open('https://github.com', '_blank')">速达</button>
-            </div>
-            <textarea class="content-box" readonly>代码仓库托管平台</textarea>
-        </div>
-    </div>
+<!-- 大框架 1 -->
+<div class="big-frame">
+    <h2>淘宝app内淘宝闪购</h2>
 
-    <!-- 大框架 2：示例分类，你可以复制整个块，改成自己的分类 -->
-    <div class="big-frame">
-        <h2>学习工具</h2>
-
-        <!-- 小框架 1：示例条目 -->
-        <div class="small-frame">
-            <div class="small-frame-top">
-                <input type="text" class="name-input" value="菜鸟教程" readonly>
-                <button class="quick-btn" onclick="window.open('https://www.runoob.com', '_blank')">速达</button>
-            </div>
-            <textarea class="content-box" readonly>编程入门学习网站</textarea>
-        </div>
-    </div>
-
-    <!-- 【如何新增大框架？】
-    复制下面这段代码，修改 h2 里的文字，就可以新增一个大框架：
-    <div class="big-frame">
-        <h2>这里写你的大框架名字</h2>
-        （里面放你的小框架）
-    </div>
-    -->
-
-    <!-- 【如何新增小框架？】
-    复制下面这段代码，修改 name、url 和内容，就可以新增一个小框架：
+    <!-- 小框架 1 -->
     <div class="small-frame">
-        <div class="small-frame-top">
-            <input type="text" class="name-input" value="这里写小框架的名字" readonly>
-            <button class="quick-btn" onclick="window.open('这里写跳转的网址', '_blank')">速达</button>
-        </div>
-        <textarea class="content-box" readonly>这里写备注内容</textarea>
+        <input type="text" class="name-input" value="闪购通用红包" readonly>
+        <button class="quick-btn" onclick="window.open('tbopen://m.taobao.com/tbopen/index.html?&action=ali.open.nav&module=h5&h5Url=https%3A%2F%2Ftb.ele.me%2Fwow%2Fz%2Funiapp%2F1100497%2Fad-miniapp%2Fet-union%2Fhome%3Fwh_weex%3Dtrue%26weex_mode%3Ddom%26channelInfo%3D%257B%2522subSubChannel%2522%253A%2522miniapp.taobao.et%2522%257D%26alsc_exsrc%3DES0007485972%26o2i_1st_clk%3D__CLICK_ID__%26tfPos%3Dh5%26scene%3Dd6323b7697d14e91a1b127fba29154b4')">一键速达app</button>
     </div>
-    -->
+
+    <!-- 小框架 2 -->
+    <div class="small-frame">
+        <input type="text" class="name-input" value="每晚8点夜宵专场大额" readonly>
+        <button class="quick-btn" onclick="window.open('tbopen://m.taobao.com/tbopen/index.html?&action=ali.open.nav&module=h5&h5Url=https%3A%2F%2Ftb.ele.me%2Fwow%2Fz%2Funiapp%2F1100497%2Fad-miniapp%2Fet-union%2Fhome%3Fwh_weex%3Dtrue%26weex_mode%3Ddom%26channelInfo%3D%257B%2522subSubChannel%2522%253A%2522miniapp.taobao.et%2522%257D%26alsc_exsrc%3DES0007485972%26o2i_1st_clk%3D__CLICK_ID__%26scene%3D8bb218764f6d414ab263903860063e28')">一键速达app</button>
+    </div>
+</div>
+
+
+
+<!-- 大框架 2 -->
+<div class="big-frame">
+    <h2>美团app外卖红包</h2>
+
+    <!-- 小框架 1 -->
+    <div class="small-frame">
+        <input type="text" class="name-input" value="美团外卖红包" readonly>
+        <button class="quick-btn" onclick="window.open('imeituan://web?url=http://dpurl.cn/xcUee4nz')">一键速达app</button>
+    </div>
+</div>
+
+
+
+<!-- 大框架 3 -->
+<div class="big-frame">
+    <h2>京东app外卖红包</h2>
+
+    <!-- 小框架 1 -->
+    <div class="small-frame">
+        <input type="text" class="name-input" value="京东外卖红包" readonly>
+        <button class="quick-btn" onclick="window.open('openapp.jdmobile://virtual?params=%7B%22category%22:%22jump%22,%22des%22:%22m%22,%22url%22:%22u.jd.com/T64tnZa%22,%22keplerID%22:%220%22,%22keplerFrom%22:%221%22,%22kepler_param%22:%7B%22source%22:%22kepler-open%22,%22channel%22:%22%22%7D,%22union_open%22:%22union_cps%22%7D')">一键速达app</button>
+    </div>
+</div>
+
+
+
+<!-- =========================================
+【下面是教程！你照着复制就能加！】
+========================================= -->
 
 </body>
 </html>
-
-
-
-
