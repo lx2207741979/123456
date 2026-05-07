@@ -9,7 +9,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: "Microsoft Yahei", sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Microsoft Yahei", sans-serif;
         }
         body {
             background-color: #fff0f6;
@@ -21,43 +21,74 @@
             text-align: center;
             margin: 1.5rem 0;
             font-size: 2rem;
+            font-weight: 600;
         }
+        /* 大框架优化 */
         .big-frame {
             background-color: white;
             border: 2px solid #ff6b9d;
-            border-radius: 12px;
-            padding: 1rem;
+            border-radius: 16px;
+            padding: 1.2rem;
             margin-bottom: 1.5rem;
+            box-shadow: 0 2px 8px rgba(255, 107, 157, 0.15);
         }
         .big-frame h2 {
             color: #ff6b9d;
             text-align: center;
-            margin-bottom: 1rem;
-            font-size: 1.6rem;
+            margin-bottom: 1.2rem;
+            font-size: 1.4rem;
+            font-weight: 600;
         }
+        /* 小框架关键优化：解决安卓按钮换行问题 */
         .small-frame {
             border: 2px solid #ff9eb5;
-            border-radius: 8px;
-            padding: 0.8rem;
+            border-radius: 10px;
+            padding: 1rem;
             margin-bottom: 1rem;
             display: flex;
-            gap: 1rem;
+            gap: 0.8rem;
             align-items: center;
+            flex-wrap: nowrap; /* 强制不换行 */
+        }
+        .small-frame:last-child {
+            margin-bottom: 0;
         }
         .name-input {
             flex: 1;
-            padding: 0.7rem;
+            min-width: 0; /* 解决安卓文字挤不下的问题 */
+            padding: 0.8rem;
             border: 1px solid #ff9eb5;
-            border-radius: 6px;
+            border-radius: 8px;
             font-size: 1rem;
+            color: #333;
+            background-color: #fff;
         }
         .quick-btn {
             background-color: #ff6b9d;
             color: white;
             border: none;
-            border-radius: 6px;
-            padding: 0.7rem 1.2rem;
-            font-size: 1rem;
+            border-radius: 8px;
+            padding: 0.8rem 1rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            white-space: nowrap; /* 按钮文字强制不换行 */
+            flex-shrink: 0; /* 按钮宽度固定，不被挤压 */
+            transition: background-color 0.2s;
+        }
+        .quick-btn:hover {
+            background-color: #ff4d8a;
+        }
+        /* 适配小屏幕 */
+        @media (max-width: 360px) {
+            .name-input {
+                font-size: 0.9rem;
+                padding: 0.7rem;
+            }
+            .quick-btn {
+                font-size: 0.85rem;
+                padding: 0.7rem 0.8rem;
+            }
         }
     </style>
 </head>
@@ -65,10 +96,8 @@
     <h1>懒人日记</h1>
 
 <!-- =========================================
-【这里开始就是你要改的全部内容！超级简单！】
+【这里是你的内容，我完全保留了！】
 ========================================= -->
-
-
 
 <!-- 大框架 1 -->
 <div class="big-frame">
@@ -87,8 +116,6 @@
     </div>
 </div>
 
-
-
 <!-- 大框架 2 -->
 <div class="big-frame">
     <h2>美团app外卖红包</h2>
@@ -100,8 +127,6 @@
     </div>
 </div>
 
-
-
 <!-- 大框架 3 -->
 <div class="big-frame">
     <h2>京东app外卖红包</h2>
@@ -112,12 +137,6 @@
         <button class="quick-btn" onclick="window.open('openapp.jdmobile://virtual?params=%7B%22category%22:%22jump%22,%22des%22:%22m%22,%22url%22:%22u.jd.com/T64tnZa%22,%22keplerID%22:%220%22,%22keplerFrom%22:%221%22,%22kepler_param%22:%7B%22source%22:%22kepler-open%22,%22channel%22:%22%22%7D,%22union_open%22:%22union_cps%22%7D')">一键速达app</button>
     </div>
 </div>
-
-
-
-<!-- =========================================
-【下面是教程！你照着复制就能加！】
-========================================= -->
 
 </body>
 </html>
